@@ -1,93 +1,61 @@
-# Moving from Complexity to Clarity in Supply Chain
-![](https://github.com/poojapatel26/Supply-Chain-Analytics/blob/main/tableau_dashboard.png)
+# Operational Supply Chain Analytics: Order Fulfillment and Inventory Performance Monitoring
 
-This is a supply chain analytics project. In which conducted an analysis of supply chain inefficiencies, and developed informative dashboards to inform business stakeholders of potential issues, along with proposing strategic business enhancements.
+**Overview**  
+An enterprise-style supply chain analytics project focused on execution-level performance monitoring. The project analyzes order fulfillment efficiency and inventory performance using SAP-aligned concepts and KPIs, implemented using Python-based analytics workflows to support operational decision-making.
 
-**Blog Post** : [Here](https://medium.com/@poojapatel26/moving-from-complexity-to-clarity-in-supply-chain-08fe4f8eb2d2)
+**Business Problem**  
+Organizations often face delayed order processing, limited visibility into service-level performance, and inefficient inventory utilization due to fragmented analytics. This project provides a unified, KPI-driven analytical framework that enables consistent monitoring of supply chain execution and supports data-driven operational decisions.
 
-**Tableau  Dashboard Link** :  [Here](https://public.tableau.com/app/profile/poojapatel26/viz/SupplyChainAnalytics_16964651727060/SupplyChainAnalytics)
+**SAP Alignment**  
+- **MM (Materials Management):** Inventory levels, inventory valuation, stock monitoring  
+- **SD (Sales & Distribution):** Order processing, fulfillment timelines, service-level KPIs  
+- **PP (Production Planning):** Demand signals and execution-level planning indicators  
 
-## Project Description :
-The project provides a real-world dataset focusing on supply chain analytics. As the main data analyst for Just In Time, you will help solve key shipment and inventory management challenges, analyze supply chain inefficiencies, and create insightful dashboards to inform business stakeholders about potential problems and propose structural business improvements.
+**End-to-End Supply Chain Flow**  
+Order intake → Inventory availability → Order processing & shipment → Fulfillment measurement → KPI monitoring & reporting
 
-## Objective 
-In this project, my primary focus is on addressing key challenges related to shipment and inventory management within the supply chain. To achieve this goal efficiently, the project has been divided into few objectives:
+**Architecture & Workflow**  
+Data ingestion → Data validation & cleaning → Feature engineering (timestamps, processing time) → KPI computation → Visualization → Reporting & export
 
-## METHODOLOGY
+**Key Features / Modules**  
+- Order Fulfillment Analytics (processing time, on-time rate)  
+- Inventory Performance Monitoring (inventory levels, inventory value)  
+- Commercial Intelligence (order volume and regional analysis)  
+- KPI Governance (standardized definitions and audit-ready logic)  
 
-Business demand analysis
+**Algorithms Used**  
+Rule-based data validation, aggregation and grouping algorithms, time-difference calculations, conditional business rules, KPI computation logic, trend and distribution analysis.
 
-Requirements: Create dashboard to analyze the business problem and improve the supply chain’s efficiency
+**Libraries Used**  
+Pandas (data ingestion, cleaning, KPI computation), NumPy (numerical operations), Matplotlib (visual analytics), Python DateTime utilities (time-based feature engineering), Jupyter Notebook (analysis and documentation).
 
-Method: descriptive and exploratory analysis
+**KPI Coverage**  
+Average order processing time, on-time order fulfillment rate, inventory levels, inventory value, order volume trends, service-level performance indicators.
 
-Tool used: Python (Data preprocessing, data cleaning, EDA, inventory segmentation); Tableau (Dashboard)
+**Run Locally**  
+- **Python Version:** 3.10 (recommended), 3.9 supported  
+- **Download:** https://www.python.org/downloads/  
+- **Multiple Versions:** Use `python3.10` explicitly if required  
+- **Virtual Environment:**  
+  ```bash
+  python -m venv venv
+Activate (Windows):
 
-Business Performance : 
+bash
+Copy code
+venv\Scripts\activate
+Activate (Mac/Linux):
 
-=> Dashboard of overall business performance including Profit & Cost of Products, total profit, best products etc 
+bash
+Copy code
+source venv/bin/activate
+Install Dependencies:
 
-Inventory Management :
+bash
+Copy code
+pip install pandas numpy matplotlib jupyter
+Run Project:
 
-=> Dashboard of inventory management including warehouse inventory, Supply/Demand by Product Department, Inventory Storage Cost, Most Overstock products, Most understock products etc
-
-Shipment Invenstigation :
-
-=> Dashboard of shipping management including delay shipping like % of delapy orders, overall delay evolution, shupping delay by location, Most deplayed products etc 
-
-Order Fullfillment : 
-
-=> Dashboard of average warehouse inventory fullfilment by Product Category
-
-Overall story of Create an interactive dashboard to summarize the research of the problem of the supply chain and suggest the solution
-
-## Data Pre-Processing & Data Cleaning 
-
-The data pre-procesing and Data cleaning is done using Python. 
-Detailed Notebook : [Here](https://github.com/poojapatel26/Supply-Chain-Analytics/blob/main/Supply_Chain_Analytics.ipynb)
-
-## Data Overview 
-The dataset provides three data tables including order_and_shipment, inventory and fulfillment. After examining the data fields, I noticed that the dataset generally represents the following key information
-
-Customer: General information about customers including identifiers and addresses
-
-Order: Information about the order including date of order, product and quantity ordered, order value
-
-Shipment: Shipping information including shipping date, shipping mode
-
-Product: Specific information about the ordered item including product name, product category, product department
-
-Warehouse Inventory: Information on inventory management for each product name including monthly inventory, warehouse location, storage costs, order fulfillment
-
-## Key Insights 
-**1 Profit & Cost :**
-* Most Profitable Product Department
-* Most Profitable Products
-* Goods with Highest Profit Margin
-* Highest Inventory Storage Cost
-
-**2 Inventory Analysis :**
-* Supply Vs Demand
-* Overstock Product Category :
-* Under stock Product Category :
-
-**3 Shipment Delay Analysis:**
-
-**4 Order Fulfillment Days:**
-
-Detailed analysis including feature metric, Key insights and suggestion can be found of medium Blog Post : [Here](https://medium.com/@poojapatel26/moving-from-complexity-to-clarity-in-supply-chain-08fe4f8eb2d2)
-
-## Sugesstions 
-
-**Optimize Product Inventory :**
-To improve profits and save on storage costs, we need to optimize our inventory, especially for most profitable and popular products worldwide. It is important to study demand patterns and adjust stock levels to avoid running out during peak periods and reduce excess inventory during slower times. Maintaining a reasonable buffer above expected demand during busy seasons can prevent shortages and optimize inventory expenses.
-
-**Reorganize Inventory Distribution :**
-The Fan Shop department’s inventory is insufficient compared to its demand, which may result in missed the sales opportunities. The company should take steps to increase inventory
-Consider reorganizing inventory distribution between warehouses to reduce shipment delays. Minimizing delays in highly demand products can improve customer satisfaction.
-
-**Marketing Strategies :**
-Focus on promoting products with the highest profit margins to increase overall revenue. Consider advertising the top products with the highest profit margins and offer targeted discounts during peak seasons to boost sales and customer engagement.
-
-**Monitor Shipment Delays :**
-A further analysis is needed to identify the reasons for shipment delays and implement corrective measures to reduce them. Analyzing shipment processes and addressing potential bottlenecks can lead to improved fulfillment efficiency and customer satisfaction.
+bash
+Copy code
+jupyter notebook
